@@ -1,0 +1,16 @@
+<%- include("partials/header") %>
+    <div class="container">
+        <div class="row">
+
+            <div style="width: 30%; margin: 25px auto;">
+                <h1 style="text-align: center">Edit Todo</h1>
+                <form action="/todos/<%= editTodo.todo_id %>?_method=PUT" method="POST">
+                    <label><strong> Todo Description</strong></label>
+                    <input class="form-control" type="text" name="description" value="<%= editTodo.description %>">
+                    <button class="btn btn-success">EDIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include("partials/footer") %>
