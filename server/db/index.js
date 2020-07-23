@@ -5,9 +5,7 @@ const pool = new Pool({
     host: 'localhost',
     database: 'perntodo',
     password: '010821skd',
-    port: 3211,
+    port: 5432,
 })
 
-module.exports = {
-    query: (text, params) => pool.query(text, params),
-}
+module.exports = pool;
